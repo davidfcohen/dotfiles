@@ -5,5 +5,6 @@ config = { check = { command = "check" } }
 [[language]]
 name = "rust"
 language-servers = ["rust-analyzer"]
+formatter = { command = 'rustfmt' }
 auto-format = true
 
