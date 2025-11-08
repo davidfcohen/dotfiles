@@ -9,8 +9,8 @@ $ rm -i ~/.bashrc
 $ ln -s ./bashrc ~/.bashrc
 ```
 
-| Dotfile(s)     | Program | Expected Location |
-| -------------- | ------- | ----------------- |
-| `bashrc`       | Bash    | `~/.bashrc`       | 
-| `bash_profile` | Bash    | `~/.bash_profile` |
-| `helix`        | Helix   | `~/.config/helix` |
+| Dotfile(s)     | Program        | Expected Location |
+| -------------- | -------------- | ----------------- |
+| `bashrc`       | Bash           | `~/.bashrc`       | 
+| `bash_profile` | Bash           | `~/.bash_profile` |
+| `helix`        | Helix (editor) | `~/.config/helix` |
