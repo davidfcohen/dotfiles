@@ -5,6 +5,7 @@ config = { check = { command = "check" } }
 [[language]]
 name = "rust"
 language-servers = ["rust-analyzer"]
+roots = ["Cargo.toml", "Cargo.lock"]
 formatter = { command = 'rustfmt' }
 auto-format = true
 
