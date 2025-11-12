@@ -9,3 +9,6 @@ true-color = true
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
+
+[editor.statusline]
+right = ["selections", "position", "position-percentage", "spacer"]

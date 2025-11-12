@@ -18,6 +18,15 @@ fi
 
 export PATH
 
+# Set the PNPM environment if PNPM is installed.
+if [ -d "$HOME/.local/share/pnpm" ]; then
+    export PNPM_HOME="$HOME/.local/share/pnpm"
+    case ":$PATH:" in
+      *":$PNPM_HOME:"*) ;;
+      *) export PATH="$PNPM_HOME:$PATH" ;;
+    esac
+fi
+
 # Execute user specific aliases and functions.
 if [ -d ~/.bashrc.d ]; then
     for rc in ~/.bashrc.d/*; do
@@ -36,3 +45,4 @@ alias mv='mv -i'
 if command -v wslpath > /dev/null; then
     PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND ; "}'printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"'
 fi
+
