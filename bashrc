@@ -1,33 +1,38 @@
 # .bashrc
 
-# Source global definitions,
+# Source global definitions.
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
-# Set user specific environment.
+# Append the user's local environment to the PATH.
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 
-# Set the Go environment if Go is installed.
-if [ -d "$HOME/go" ]; then
+# Append the user's Go environment to the PATH.
+APPEND="$HOME/go/bin"
+if [ -d $APPEND ]; then
     export GOPATH="$HOME/go"
-    PATH="$PATH:$GOPATH/bin"
+    PATH="$PATH:$APPEND"
+fi
+
+# Append the user's Rust environment to the PATH.
+APPEND="$HOME/.cargo/bin"
+if [ -d $APPEND ]; then
+    PATH="$PATH:$APPEND"
+fi
+
+# Append the user's JS environment to the PATH.
+APPEND="$HOME/.local/share/pnpm"
+if [ -d $APPEND ]; then
+    export PNPM_HOME=$APPEND
+    PATH="$PATH:$APPEND"
 fi
 
 export PATH
 
-# Set the PNPM environment if PNPM is installed.
-if [ -d "$HOME/.local/share/pnpm" ]; then
-    export PNPM_HOME="$HOME/.local/share/pnpm"
-    case ":$PATH:" in
-      *":$PNPM_HOME:"*) ;;
-      *) export PATH="$PNPM_HOME:$PATH" ;;
-    esac
-fi
-
-# Execute user specific aliases and functions.
+# Run the configuration scripts in `bashrc.d`.
 if [ -d ~/.bashrc.d ]; then
     for rc in ~/.bashrc.d/*; do
         if [ -f "$rc" ]; then
