@@ -1,0 +1,15 @@
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+config = { check = { command = "check" }, hover = { memoryLayout = { enabled = true } } }
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer"]
+roots = ["Cargo.toml", "Cargo.lock"]
+formatter = { command = 'rustfmt' }
+auto-format = true
+
+[[language]]
+name = "json"
+formatter = { command = 'prettier', args = ["--parser", "json"] }
+auto-format = true
