@@ -1,6 +1,6 @@
 [language-server.rust-analyzer]
 command = "rust-analyzer"
-config = { check = { command = "check" } }
+config = { check = { command = "check" }, hover = { memoryLayout = { enabled = true } } }
 
 [[language]]
 name = "rust"
@@ -11,5 +11,5 @@ auto-format = true
 
 [[language]]
 name = "json"
-formatter = { command = 'prettier', args = ["--parser", "json"]}
+formatter = { command = 'prettier', args = ["--parser", "json"] }
 auto-format = true
