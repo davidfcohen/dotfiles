@@ -46,6 +46,11 @@ unset rc
 alias rm='rm -i'
 alias mv='mv -i'
 
+# If `hx` is installed, use it as the editor.
+if command -v hx > /dev/null; then
+    export EDITOR=hx
+fi
+
 # If using WSL, emit the working directory when the bash prompt is displayed.
 if command -v wslpath > /dev/null; then
     PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND ; "}'printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"'
