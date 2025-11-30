@@ -1,5 +1,5 @@
 [general]
-import = ["~/.config/alacritty/themes/catppuccin_mocha.toml"]
+import = ["~/.config/alacritty/themes/autumn.toml"]
 
 [window]
 dimensions = { columns = 100, lines = 30 }
