@@ -1,0 +1,14 @@
+[general]
+import = ["~/.config/alacritty/themes/catppuccin_mocha.toml"]
+
+[window]
+dimensions = { columns = 100, lines = 30 }
+title = "Terminal"
+
+[font]
+normal = { family = "MonoLisa" }
+size = 11
+
+[selection]
+save_to_clipboard = true
+
