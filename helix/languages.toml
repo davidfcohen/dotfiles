@@ -1,6 +1,6 @@
 [language-server.rust-analyzer]
 command = "rust-analyzer"
-config = { check = { command = "check" }, hover = { memoryLayout = { enabled = true } } }
+config = { check = { command = "clippy", allFeatures = true }, hover = { memoryLayout = { enabled = true } } }
 
 [[language]]
 name = "rust"
