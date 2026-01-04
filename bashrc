@@ -46,6 +46,9 @@ unset rc
 alias rm='rm -i'
 alias mv='mv -i'
 
+# `ls` list folders before files.
+alias ls='ls --color=auto --group-directories-first'
+
 # If `hx` is installed, use it as the editor.
 if command -v hx > /dev/null; then
     export EDITOR=hx
