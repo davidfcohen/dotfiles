@@ -14,3 +14,9 @@ save_to_clipboard = true
 
 [mouse]
 hide_when_typing = true
+
+# Shift + Enter writes a new line instead of sending a message.
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\n"
