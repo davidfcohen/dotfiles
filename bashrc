@@ -42,9 +42,10 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-# Ask before removing or moving files.
-alias rm='rm -i'
+# Ask before copying, moving, or removing files.
+alias cp='cp -i'
 alias mv='mv -i'
+alias rm='rm -i'
 
 # `ls` list folders before files.
 alias ls='ls --color=auto --group-directories-first'
