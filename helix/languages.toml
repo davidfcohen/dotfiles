@@ -10,6 +10,18 @@ formatter = { command = 'rustfmt', args = ["--edition=2024"] }
 auto-format = true
 
 [[language]]
+name = "c"
+language-servers = ["clangd"]
+indent = { tab-width = 8, unit = "\t" }
+rulers = [80]
+auto-format = false
+
+[[language]]
+name = "html"
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+auto-format = true
+
+[[language]]
 name = "json"
 formatter = { command = 'prettier', args = ["--parser", "json"] }
 auto-format = true
