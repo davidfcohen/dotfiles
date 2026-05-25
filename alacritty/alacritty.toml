@@ -16,3 +16,6 @@ hide_when_typing = true
 key = "Return"
 mods = "Shift"
 chars = "\n"
+
+[terminal]
+shell = "fish"
