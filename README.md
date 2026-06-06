@@ -7,7 +7,7 @@ Clone the repository and create symbolic links.
 ```
 $ git clone git@github.com:davidfcohen/dotfiles.git
 $ cd dotfiles
-$ ln -s alacritty ~/.config/alacritty
+$ ln -sr alacritty/ ~/.config/alacritty
 ```
 
 | Dotfile(s)     | Location              |
