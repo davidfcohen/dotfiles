@@ -1,3 +1,3 @@
 if status is-login
-    keychain --eval $HOME/.ssh/id_github | source
+    keychain --eval $HOME/.ssh/id_* | source
 end
