@@ -1,4 +1,0 @@
-# This file contains fish universal variable definitions.
-# VERSION: 3.0
-SETUVAR EDITOR:/usr/bin/hx
-SETUVAR __fish_initialized:4300
