@@ -1,0 +1,6 @@
+alacritty	.config/alacritty
+fish		.config/fish
+helix		.config/helix
+sway		.config/sway
+swaylock  	.config/swaylock
+waybar 		.config/waybar
