@@ -3,4 +3,5 @@ fish		.config/fish
 helix		.config/helix
 sway		.config/sway
 swaylock  	.config/swaylock
+wallpapers  .config/wallpapers
 waybar 		.config/waybar
