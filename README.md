@@ -1,5 +1,7 @@
 # David's Dotfiles
 
+Here are my dotfiles!
+
 ## Instructions
 
 Clone the repository. Then, install the dotfiles.
@@ -16,7 +18,9 @@ Optionally, create symbolic links manually.
 $ ln -sn $(pwd)/alacritty $HOME/.config/alacritty
 ```
 
-| Dotfile(s)     | Expected Location     |
+## Locations
+
+| Program        | Config Location       |
 | -------------- | --------------------- |
 | `alacritty`    | `~/.config/alacritty` |
 | `fish`         | `~/.config/fish`      |
