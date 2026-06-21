@@ -13,7 +13,7 @@ $ ./install.sh
 Optionally, create symbolic links manually.
 
 ```
-$ ln -s $(pwd)/alacritty $HOME/.config/alacritty
+$ ln -sn $(pwd)/alacritty $HOME/.config/alacritty
 ```
 
 | Dotfile(s)     | Expected Location     |
