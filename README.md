@@ -2,12 +2,18 @@
 
 ## Instructions
 
-Clone the repository and create symbolic links.
+Clone the repository. Then, install the dotfiles.
 
 ```
-git clone git@github.com:davidfcohen/dotfiles.git
-cd dotfiles
-ln -s $(pwd)/alacritty/ ~/.config/alacritty
+$ git clone git@github.com:davidfcohen/dotfiles.git
+$ cd dotfiles
+$ ./install.sh
+```
+
+Optionally, create symbolic links manually.
+
+```
+$ ln -s $(pwd)/alacritty $HOME/.config/alacritty
 ```
 
 | Dotfile(s)     | Expected Location     |
@@ -16,5 +22,6 @@ ln -s $(pwd)/alacritty/ ~/.config/alacritty
 | `fish`         | `~/.config/fish`      |
 | `helix`        | `~/.config/helix`     |
 | `sway`         | `~/.config/sway`      |
+| `swaylock`     | `~/.config/swaylock`  |
 | `waybar`       | `~/.config/waybar`    |
 
