@@ -6,7 +6,7 @@ config = { cargo = { features = "all" }, check = { command = "clippy" }, hover =
 name = "rust"
 language-servers = ["rust-analyzer"]
 roots = ["Cargo.toml", "Cargo.lock"]
-formatter = { command = 'rustfmt', args = ["--edition=2024"] }
+formatter = { command = 'rustfmt' }
 auto-format = true
 
 [[language]]
@@ -15,6 +15,10 @@ language-servers = ["clangd"]
 indent = { tab-width = 8, unit = "\t" }
 rulers = [80]
 auto-format = false
+
+[[python]]
+name = "python"
+language-servers = ["ty"]
 
 [[language]]
 name = "html"
