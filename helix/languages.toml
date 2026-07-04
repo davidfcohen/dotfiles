@@ -1,13 +1,13 @@
-[language-server.rust-analyzer]
-command = "rust-analyzer"
-config = { cargo = { features = "all" }, check = { command = "clippy" }, hover = { memoryLayout = { enabled = true } } }
-
 [[language]]
 name = "rust"
 language-servers = ["rust-analyzer"]
 roots = ["Cargo.toml", "Cargo.lock"]
 formatter = { command = 'rustfmt' }
 auto-format = true
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+config = { cargo = { features = "all" }, check = { command = "clippy" }, hover = { memoryLayout = { enabled = true } } }
 
 [[language]]
 name = "c"
@@ -16,16 +16,17 @@ indent = { tab-width = 8, unit = "\t" }
 rulers = [80]
 auto-format = false
 
-[[python]]
+[[language]]
 name = "python"
-language-servers = ["ty"]
-
-[[language]]
-name = "html"
-formatter = { command = 'prettier', args = ["--parser", "html"] }
+language-servers = ["ruff", "ty"]
 auto-format = true
+formatter = { command = "ruff", args = ["format", "-"] }
 
-[[language]]
-name = "json"
-formatter = { command = 'prettier', args = ["--parser", "json"] }
-auto-format = true
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
