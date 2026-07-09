@@ -1,14 +1,14 @@
-# David's Dotfiles
+# David's Config
 
-Here are my dotfiles!
+Here are my config files!
 
 ## Instructions
 
-Clone the repository. Then, install the dotfiles.
+Clone the repository. Then, install the config.
 
 ```
-$ git clone git@github.com:davidfcohen/dotfiles.git
-$ cd dotfiles
+$ git clone git@github.com:davidfcohen/config.git
+$ cd config
 $ ./install.sh
 ```
 
